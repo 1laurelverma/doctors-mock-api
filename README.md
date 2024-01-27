@@ -1,5 +1,5 @@
 # Deployed Link
-https://master--laurelfixhealthassignment.netlify.app/
+(https://doctors-mock-api.onrender.com/api/doctors)
 
 
 ## How to run the Project
