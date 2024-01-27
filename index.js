@@ -1,8 +1,13 @@
 const express = require("express");
 const Doctors = require("./MOCK_DATA.json");
 const app = express();
-const port = 8000;
+const dotenv = require("dotenv");
+dotenv.config();
 
+const hardcodedPort = 7000;
+const Port = process.env.PORT;
+
+console.log(Port);
 // Routes
 app.get("/api/doctors", (req, res) => {
   return res.json(Doctors);
@@ -16,4 +21,4 @@ app.get("/api/doctors/:city", (req, res) => {
   return res.json(doctorByCity);
 });
 
-app.listen(port, () => console.log("Backend is Runnig at 8000"));
+app.listen(Port, () => console.log(`Backend is Runing at ${Port}`));
